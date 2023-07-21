@@ -6,3 +6,15 @@
     font-family: Quicksand;
     src: url('./assets/font/Quicksand-VariableFont_wght.ttf');
 }
+
+.p-heading {
+    @apply md:text-5xl mobile:text-3xl font-[500]
+}
+
+.p-text {
+    @apply text-xl mt-6;
+}
+
+.header-button-links {
+    @apply hover:text-blue-500 pl-6 pr-6;
+}

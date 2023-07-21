@@ -7,10 +7,10 @@ import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ButtonComponent
+    AppComponent
   ],
   imports: [
+    ButtonComponent,
     BrowserModule,
     AppRoutingModule
   ],
