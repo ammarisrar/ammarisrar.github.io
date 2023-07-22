@@ -7,6 +7,10 @@
     src: url('./assets/font/Quicksand-VariableFont_wght.ttf');
 }
 
+.text-primary {
+    @apply text-blue-600
+}
+
 .p-heading {
     @apply md:text-5xl mobile:text-3xl font-[500]
 }
@@ -15,6 +19,10 @@
     @apply text-xl mt-6;
 }
 
-.header-button-links {
-    @apply hover:text-blue-500 pl-6 pr-6;
+.header-item {
+    @apply hover:text-blue-500 md:pl-6 md:pr-6 mobile:pl-3 mobile:pr-3;
+}
+
+.divider {
+    @apply w-[2px] h-28 bg-blue-500
 }
