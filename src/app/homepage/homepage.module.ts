@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageRoutingModule } from './homepage-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ButtonComponent } from '../shared/button/button.component';
+import { TestimonialComponent } from '../shared/testimonial/testimonial.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ButtonComponent } from '../shared/button/button.component';
   imports: [
     CommonModule,
     HomepageRoutingModule,
-    ButtonComponent
+    ButtonComponent,
+    TestimonialComponent
   ]
 })
 export class HomepageModule { }

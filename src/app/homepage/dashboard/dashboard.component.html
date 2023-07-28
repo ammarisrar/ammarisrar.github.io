@@ -37,7 +37,7 @@
         </div>
     </section>
     <section>
-        <div class="p-heading">Companies served</div>
+        <p class="p-heading">Companies served</p>
         <div class="grid grid-cols-3 gap-4 p-4">
             <a href="https://www.qvantel.com/"
                 class="flex justify-center w-full transition ease-in-out hover:bg-blue-300 rounded-md hover:shadow-xl">
@@ -51,6 +51,14 @@
                 class="flex justify-center w-full transition ease-in-out hover:bg-purple-400 rounded-md hover:shadow-xl">
                 <img class="w-[150px] p-4" src="../../../assets/autosphere_logo.svg" alt="">
             </a>
+        </div>
+    </section>
+    <section>
+        <p class="p-heading">Recommendations</p>
+        <div class="grid mobile:grid-cols-1 md:grid-cols-3 gap-6 p-4">
+            <div *ngFor="let entry of testimonials">
+                <app-testimonial testimonial="{{entry.testimonial}}" name="{{entry.name}}" designation="{{entry.designation}}" company="{{entry.company}}"></app-testimonial>
+            </div>
         </div>
     </section>
 </body>
