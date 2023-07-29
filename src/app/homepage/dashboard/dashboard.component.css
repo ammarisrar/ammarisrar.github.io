@@ -3,5 +3,5 @@ section {
 }
 
 .outline-box {
-    @apply outline outline-2 outline-blue-500 text-blue-500 rounded-xl p-2 pl-0
+    @apply outline outline-2 outline-blue-500 text-blue-500 rounded-xl p-1
 }
