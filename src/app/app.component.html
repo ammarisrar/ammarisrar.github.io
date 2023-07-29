@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<body class="bg-blue-100">
+<body class="bg-blue-100 shadow-lg">
     <header class="md:p-10 mobile:p-4 w-full flex justify-end">
         <button class="header-item">About</button>
         <button class="header-item">Projects</button>
         <app-button class="header-item" (click)="this.contactService.sendEmail()" text="Contact"></app-button>
     </header>
-    <div class="mobile:p-12 mobile:pt-0">
+    <div class="md:p-40 md:pt-6 mobile:p-12 mobile:pt-0">
         <router-outlet></router-outlet>
     </div>
 </body>
+<footer class="flex justify-center m-1">
+    <p>Website created by myself on Angular, and hosted on GitHub Pages.</p>
+    <div (click)="this.contactService.openGitHubSrc()" class="transition ease-in-out inline-flex hover:bg-blue-500 hover:outline-0 outline outline-2 outline-blue-300 hover:text-white rounded-md ml-1 pl-1 pr-1">
+        <p>Source Code</p>
+        <img src="../assets/github-mark.svg" class="h-5 ml-1 mr-1">
+    </div>
+</footer>
 </html>

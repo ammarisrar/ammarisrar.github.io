@@ -2,13 +2,29 @@
 
 <body>
     <section>
-        <p class="text-3xl">Hello, I am</p>
-        <p class="mt-4 md:text-8xl mobile:text-6xl font-[500]">Ammar Israr</p>
-        <p class="mt-2 text-xl">and I am a <strong class="text-2xl">front-end developer</strong></p>
+        <p class="text-3xl"><span class="font-bold">Hello</span>, I am</p>
+        <p class="m-6 ml-0 md:text-8xl mobile:text-6xl font-[500]"><span class="outline-box">Ammar Israr</span></p>
+        <p class="mt-10 text-xl">and I am a <strong class="text-2xl"> <span class="outline-box">front-end developer</span></strong></p>
         <p class="p-text">A passionate front-end developer, having industry experience from multiple reputed
             organizations.</p>
         <div class="mt-6 w-40">
             <app-button text="Download CV" (click)="this.contactService.downloadResume()"></app-button>
+        </div>
+        <div class="rounded-xl m-5 p-2 bg-white shadow-lg">
+            <div class="grid grid-cols-3 place-items-center gap-2">
+                <div class="md:p-4 mobile:p-2">
+                    <p class="flex justify-center p-heading text-primary">3</p>
+                    <p class="flex justify-center p-text font-bold">Organizations served</p>
+                </div>
+                <div class="md:p-4 mobile:p-2">
+                    <p class="flex justify-center p-heading text-primary">20+</p>
+                    <p class="flex justify-center p-text font-bold">Major features added</p>
+                </div>
+                <div class="md:p-4 mobile:p-2">
+                    <p class="flex justify-center p-heading text-primary">10+</p>
+                    <p class="flex justify-center p-text font-bold">Projects worked on</p>
+                </div>
+            </div>
         </div>
     </section>
     <section>
@@ -17,24 +33,6 @@
             work of art.</p>
         <div class="mt-6 w-40">
             <app-button (click)="this.contactService.sendEmail()" text="Hire me"></app-button>
-        </div>
-    </section>
-    <section>
-        <div class="flex h-36 items-center justify-around w-full">
-            <div class="md:p-4 mobile:p-2">
-                <p class="p-heading text-primary">3</p>
-                <p class="p-text font-bold">Organizations served</p>
-            </div>
-            <span class="divider"></span>
-            <div class="md:p-4 mobile:p-2">
-                <p class="p-heading text-primary">20+</p>
-                <p class="p-text font-bold">Major features implemented</p>
-            </div>
-            <span class="divider"></span>
-            <div class="md:p-4 mobile:p-2">
-                <p class="p-heading text-primary">10+</p>
-                <p class="p-text font-bold">Projects worked on</p>
-            </div>
         </div>
     </section>
     <section>
@@ -56,7 +54,7 @@
     </section>
     <section>
         <p class="p-heading">Recommendations</p>
-        <div class="grid mobile:grid-cols-1 md:grid-cols-3 gap-6 p-4">
+        <div class="grid mobile:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 p-4">
             <div *ngFor="let entry of testimonials">
                 <app-testimonial testimonial="{{entry.testimonial}}" name="{{entry.name}}"
                     designation="{{entry.designation}}" company="{{entry.company}}"></app-testimonial>
@@ -64,5 +62,4 @@
         </div>
     </section>
 </body>
-
 </html>

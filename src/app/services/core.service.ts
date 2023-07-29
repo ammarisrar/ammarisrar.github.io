@@ -14,4 +14,8 @@ export class ContactService {
   downloadResume() {
     window.open("../../assets/Ammar Israr.pdf")
   }
+
+  openGitHubSrc() {
+    window.location.href="https://github.com/ammarisrar/ammarisrar.github.io"
+  }
 }

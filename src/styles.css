@@ -16,7 +16,7 @@
 }
 
 .p-text {
-    @apply text-xl mt-6;
+    @apply md:text-xl mobile:text-sm mt-6;
 }
 
 .header-item {
