@@ -3,11 +3,12 @@
 <body>
     <section>
         <p class="text-3xl">Hello, I am</p>
-        <p class="md:text-8xl mobile:text-6xl font-[500]">Ammar Israr</p>
+        <p class="mt-4 md:text-8xl mobile:text-6xl font-[500]">Ammar Israr</p>
+        <p class="mt-2 text-xl">and I am a <strong class="text-2xl">front-end developer</strong></p>
         <p class="p-text">A passionate front-end developer, having industry experience from multiple reputed
             organizations.</p>
         <div class="mt-6 w-40">
-            <app-button text="Download CV"></app-button>
+            <app-button text="Download CV" (click)="this.contactService.downloadResume()"></app-button>
         </div>
     </section>
     <section>
@@ -15,7 +16,7 @@
         <p class="p-text">My emphasis is on quality, and I put quite a lot of effort in refining my work to make it a
             work of art.</p>
         <div class="mt-6 w-40">
-            <app-button text="Hire me"></app-button>
+            <app-button (click)="this.contactService.sendEmail()" text="Hire me"></app-button>
         </div>
     </section>
     <section>
@@ -57,7 +58,8 @@
         <p class="p-heading">Recommendations</p>
         <div class="grid mobile:grid-cols-1 md:grid-cols-3 gap-6 p-4">
             <div *ngFor="let entry of testimonials">
-                <app-testimonial testimonial="{{entry.testimonial}}" name="{{entry.name}}" designation="{{entry.designation}}" company="{{entry.company}}"></app-testimonial>
+                <app-testimonial testimonial="{{entry.testimonial}}" name="{{entry.name}}"
+                    designation="{{entry.designation}}" company="{{entry.company}}"></app-testimonial>
             </div>
         </div>
     </section>

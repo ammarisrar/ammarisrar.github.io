@@ -4,7 +4,7 @@
     <header class="md:p-10 mobile:p-4 w-full flex justify-end">
         <button class="header-item">About</button>
         <button class="header-item">Projects</button>
-        <app-button class="header-item" text="Contact"></app-button>
+        <app-button class="header-item" (click)="this.contactService.sendEmail()" text="Contact"></app-button>
     </header>
     <div class="mobile:p-12 mobile:pt-0">
         <router-outlet></router-outlet>

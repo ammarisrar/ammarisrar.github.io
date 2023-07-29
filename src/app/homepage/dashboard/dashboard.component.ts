@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ContactService } from 'src/app/services/core.service';
 
 interface Testimony {
   testimonial: string,
@@ -13,6 +14,9 @@ interface Testimony {
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+
+  constructor(public contactService: ContactService) {}
+  
   testimonials: Testimony[] = [
     {
       testimonial: "[Ammar] is an independent tech that requires minimal supervision and is also known as an individual who is willing to take risks and he will reach out to people and involve them with projects which already demonstrate that Ammar has been effective in his role and has gained respect from all his peers! An individual who never fears with providing suggestions and opinions with strong characteristics and justification!",
