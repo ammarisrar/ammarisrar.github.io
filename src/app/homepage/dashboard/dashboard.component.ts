@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { ContactService } from 'src/app/services/core.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject, concat, concatMap, delay, first, from, ignoreElements, interval, map, mergeMap, of, repeat, take, takeUntil, timer } from 'rxjs';
+import { ContactService } from 'src/app/services/contact.service';
 
 interface Testimony {
   testimonial: string,
@@ -8,15 +9,67 @@ interface Testimony {
   company: string
 }
 
+interface Type {
+  word: string,
+  speed: number,
+  backwards?: boolean
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit, OnDestroy {
 
-  constructor(public contactService: ContactService) {}
-  
+  designation: string = ""
+  allDesignations: string[] = ["a Frontend Developer", "a Python Developer", "a Django Developer", "an Automation Engineer"]
+
+  nameUnsub = new Subject<void>();
+  designationsUnsub = new Subject<void>();
+
+  constructor(public contactService: ContactService) { }
+
+  ngOnDestroy(): void {
+    this.designationsUnsub.next()
+    this.designationsUnsub.complete()
+  }
+
+  ngOnInit(): void {
+    from(this.allDesignations).pipe(
+      concatMap(this.typeEffect$),
+      repeat()
+    ).subscribe(
+      {
+        next: (val) => {
+          this.designation = val
+        }
+      }
+    )
+  }
+
+  type$ = ({ word, speed, backwards = false }: Type) =>
+    interval(speed).pipe(
+      map(x =>
+        backwards ? word.substr(0, word.length - x - 1) : word.substr(0, x + 1)
+      ),
+      take(word.length)
+    );
+
+  typeEffect$ = (word: string) =>
+    concat(
+      this.type$({ word, speed: 120 }), // type forwards
+      of("").pipe(
+        delay(2000),
+        ignoreElements()
+      ), // pause
+      this.type$({ word, speed: 60, backwards: true }), // delete
+      of("").pipe(
+        delay(300),
+        ignoreElements()
+      ) // pause
+    );
+
   testimonials: Testimony[] = [
     {
       testimonial: "[Ammar] is an independent tech that requires minimal supervision and is also known as an individual who is willing to take risks and he will reach out to people and involve them with projects which already demonstrate that Ammar has been effective in his role and has gained respect from all his peers! An individual who never fears with providing suggestions and opinions with strong characteristics and justification!",
