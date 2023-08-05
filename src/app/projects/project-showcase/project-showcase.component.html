@@ -1,10 +1,6 @@
 <section>
     <p class="p-heading">Projects</p>
-    <div>
-        <app-project-tile></app-project-tile>
-        <app-project-tile></app-project-tile>
-        <app-project-tile></app-project-tile>
-        <app-project-tile></app-project-tile>
-        <app-project-tile></app-project-tile>
+    <div *ngFor="let project of projects">
+        <app-project-tile company="{{project.company}}" role="{{project.role}}" projectTitle="{{project.projectTitle}}" [description]="project.description"></app-project-tile>
     </div>
 </section>

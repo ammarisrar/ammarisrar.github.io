@@ -7,6 +7,10 @@
     src: url('./assets/font/Quicksand-VariableFont_wght.ttf');
 }
 
+.link {
+    @apply cursor-pointer transition ease-in-out inline-flex hover:bg-blue-400 hover:outline-0 hover:text-white rounded-md ml-1 pl-1 pr-1
+}
+
 .text-primary {
     @apply text-blue-600
 }
