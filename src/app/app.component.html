@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="bg-gray-100" lang="en">
 <body>
     <header class="md:p-10 mobile:p-4 w-full flex justify-end">
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} class="flex cursor-pointer items-center header-item">About</a>
@@ -10,9 +10,9 @@
         <router-outlet></router-outlet>
     </div>
 </body>
-<footer class="flex justify-center m-1">
+<footer class="flex justify-center m-1 bg-gray-200 rounded-md">
     <p>Website created by myself on Angular, and hosted on GitHub Pages.</p>
-    <div (click)="this.contactService.openGitHubSrc()" class="cursor-pointer transition ease-in-out inline-flex hover:bg-blue-500 hover:outline-0 outline outline-2 outline-blue-300 hover:text-white rounded-md ml-1 pl-1 pr-1">
+    <div (click)="this.contactService.openGitHubSrc()" class="cursor-pointer transition ease-in-out inline-flex hover:bg-gray-500 hover:outline-0 outline outline-2 outline-gray-300 hover:text-white rounded-md ml-1 pl-1 pr-1">
         <p>Source Code</p>
         <img src="../assets/github-mark.svg" class="h-5 ml-1 mr-1">
     </div>

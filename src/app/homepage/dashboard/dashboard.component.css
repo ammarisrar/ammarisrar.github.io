@@ -1,7 +1,3 @@
-section {
-    @apply mobile:mt-20 md:m-40 mobile:m-10;
-}
-
 .outline-box {
     @apply outline outline-2 outline-blue-500 text-blue-500 rounded-xl p-1
 }
