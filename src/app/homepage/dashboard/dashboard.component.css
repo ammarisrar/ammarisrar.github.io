@@ -1,5 +1,5 @@
 section {
-    @apply mobile:mt-8 md:mt-20;
+    @apply mobile:mt-20 md:m-40 mobile:m-10;
 }
 
 .outline-box {

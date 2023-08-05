@@ -6,7 +6,7 @@
         <a routerLink="/projects" routerLinkActive="active" class="flex cursor-pointer items-center header-item">Projects</a>
         <app-button class="header-item" (click)="this.contactService.sendEmail()" text="Contact"></app-button>
     </header>
-    <div class="md:p-40 md:pt-6 mobile:p-12 mobile:pt-0">
+    <div>
         <router-outlet></router-outlet>
     </div>
 </body>

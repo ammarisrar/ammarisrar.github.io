@@ -10,5 +10,5 @@ export class AppComponent {
 
   constructor(public contactService: ContactService) {}
 
-  title = 'ammarIsrar';
+  title = 'Ammar Israr';
 }
