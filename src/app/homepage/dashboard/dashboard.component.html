@@ -28,8 +28,12 @@
     </section>
     <section class="bg-blue-200">
         <p class="p-heading">Why hire me for your next <span class="text-primary">project?</span></p>
-        <p class="p-text">My emphasis is on quality, and I put quite a lot of effort in refining my work to make it a
-            work of art.</p>
+        <div class="grid md:grid-cols-2 mobile:grid-cols-1 gap-3 m-10">
+            <div *ngFor="let achievement of achievements">
+                <app-feature [title]="achievement.title" [description]="achievement.description" [asset]="achievement.asset"></app-feature>
+            </div>
+        </div>
+        <p class="p-text">"The Sky's the limit". Let's take your project to new heights.</p>
         <div class="mt-6 w-40">
             <app-button (click)="this.contactService.sendEmail()" text="Hire me"></app-button>
         </div>

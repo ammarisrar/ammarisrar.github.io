@@ -15,6 +15,12 @@ interface Type {
   backwards?: boolean
 }
 
+interface Achievement {
+  title: string,
+  description: string,
+  asset: string
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -69,6 +75,29 @@ export class DashboardComponent implements OnInit, OnDestroy {
         ignoreElements()
       ) // pause
     );
+
+  achievements: Achievement[] = [
+    {
+      title: "International Industry experience",
+      description: "Worked with multiple reputed international organizations on B2B products, and received high praise.",
+      asset: "favourite"
+    },
+    {
+      title: "Gold Medalist",
+      description: "Received a gold medal for excellent academic performance, receiving 5 academic scholarships. Got the degree with 3.78 CPGA.",
+      asset: "winner"
+    },
+    {
+      title: "Innovation Mindset",
+      description: 'Quality first! Therefore, I always strive for improvement, coming up with with new ideas for features and overall product efficiency.',
+      asset: "idea"
+    },
+    {
+      title: "Adaptive Thinking",
+      description: "I am always learning, and I adapt to the environment. I learn and I strive to improve myself, always growing my knowledge and thought-process.",
+      asset: "options"
+    }
+  ]
 
   testimonials: Testimony[] = [
     {
