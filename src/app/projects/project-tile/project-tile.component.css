@@ -1,0 +1,7 @@
+.tech-icon-container {
+    @apply flex justify-center items-center h-12 w-12 m-2 p-2 outline outline-2 rounded-full outline-gray-300
+}
+
+.tech-icon {
+    @apply h-7
+}

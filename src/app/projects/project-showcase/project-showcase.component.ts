@@ -5,6 +5,7 @@ interface Project {
   role: string
   projectTitle: string
   description: string[]
+  stack: string[]
 }
 
 @Component({
@@ -24,7 +25,8 @@ export class ProjectShowcaseComponent {
         "Created a companion tray using Angular and ElectronJS.",
         "Implemented communication with Jenkins by consuming its APIs.",
         "Implemented efficient polling using RxJS."
-      ]
+      ],
+      stack: ["Python", "Angular", "Electron", "RxJS", "Jenkins", "Jupyter", "JavaScript", "TypeScript", "Git", "Azure-DevOps", "Keycloak"]
     },
     {
       company: "AI-XPRT",
@@ -34,7 +36,8 @@ export class ProjectShowcaseComponent {
         "Responsible for developing a solution to read invoices using Abbyy FineReader OCR.",
         "Parsed the OCR data for calculation and reporting.",
         "Used MongoDB as the database."
-      ]
+      ],
+      stack: ["Python", "ABBYY", "MongoDB", "Git", "Jira", "BitBucket", "Confluence"]
     },
     {
       company: "Qvantel",
@@ -44,7 +47,8 @@ export class ProjectShowcaseComponent {
         "Responsible for developing a B2B application for VEON group using Python/Django.", 
         "Developed multiple use-cases of a CSR application.",
         "Used PyTest for unit testing"
-      ]
+      ],
+      stack: ["Python", "django", "Docker", "Git", "Jira", "BitBucket", "Confluence"]
     }
   ]
 }

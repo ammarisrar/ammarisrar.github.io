@@ -10,4 +10,5 @@ export class ProjectTileComponent {
   @Input() role: string = ''
   @Input() projectTitle: string = ''
   @Input() description: string[] = []
+  @Input() stack: string[] = []
 }
