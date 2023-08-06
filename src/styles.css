@@ -16,7 +16,7 @@
 }
 
 .p-heading {
-    @apply md:text-5xl mobile:text-3xl font-[500]
+    @apply md:text-5xl mobile:text-3xl font-[500] mb-7
 }
 
 .p-small-heading {
@@ -40,5 +40,5 @@
 }
 
 section {
-    @apply mobile:mt-20 md:m-40 mobile:m-10;
+    @apply mobile:pt-20 md:p-40 mobile:p-10;
 }

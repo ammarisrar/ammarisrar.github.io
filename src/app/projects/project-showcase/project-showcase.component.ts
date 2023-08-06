@@ -19,8 +19,11 @@ export class ProjectShowcaseComponent {
       role: "Software Developer",
       projectTitle: "Autosphere Product Suite for Automation",
       description: [
-        "Responsible for developing a B2B application for VEON group using Python/Django.", 
-        "Developed multiple use-cases of a CSR application."
+        "Responsible for developing multiple B2B products as a MEAN stack developer.",
+        "Created a complete dashboard from scratch using Angular.",
+        "Created a companion tray using Angular and ElectronJS.",
+        "Implemented communication with Jenkins by consuming its APIs.",
+        "Implemented efficient polling using RxJS."
       ]
     },
     {
@@ -28,7 +31,8 @@ export class ProjectShowcaseComponent {
       role: "Python Developer",
       projectTitle: "Digital Audit of financial statements",
       description: [
-        "Responsible for developing a solution to read invoices using Abbyy FineReader OCR, and to extract and parse data from them.", 
+        "Responsible for developing a solution to read invoices using Abbyy FineReader OCR.",
+        "Parsed the OCR data for calculation and reporting.",
         "Used MongoDB as the database."
       ]
     },
@@ -38,7 +42,8 @@ export class ProjectShowcaseComponent {
       projectTitle: "CSR Toolbox",
       description: [
         "Responsible for developing a B2B application for VEON group using Python/Django.", 
-        "Developed multiple use-cases of a CSR application."
+        "Developed multiple use-cases of a CSR application.",
+        "Used PyTest for unit testing"
       ]
     }
   ]

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="bg-blue-100" lang="en">
+<html class="bg-blue-300" lang="en">
 <body>
-    <header class="md:p-10 mobile:p-4 w-full flex justify-end">
+    <nav>
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true} class="flex cursor-pointer items-center header-item">About</a>
         <a routerLink="/projects" routerLinkActive="active" class="flex cursor-pointer items-center header-item">Projects</a>
         <app-button class="header-item" (click)="this.contactService.sendEmail()" text="Contact"></app-button>
-    </header>
+    </nav>
     <div>
         <router-outlet></router-outlet>
     </div>
