@@ -1,6 +1,6 @@
 <div class="grid md:grid-cols-12 bg-white mobile:grid-cols-1 shadow-lg rounded-xl m-10">
     <div class="col-span-3 p-3">
-        <p class="p-small-heading">{{company}}</p>
+        <p class="text-xl font-semibold">{{company}}</p>
         <p class="text-gray-500">{{role}}</p>
         <div class="flex p-4 flex-wrap gap-2">
             <div *ngFor="let item of stack">
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="col-span-9 p-3">
-        <h1 class="text-xl font-semibold">{{projectTitle}}</h1>
+        <h1 class="p-small-heading">{{projectTitle}}</h1>
         <div class="p-2 m-2 bg-blue-200 shadow-md rounded-lg">
             <div class="p-1" *ngFor="let item of description">
                 <p class="font-medium">{{item}}</p>
