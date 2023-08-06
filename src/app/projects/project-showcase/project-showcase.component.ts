@@ -26,7 +26,7 @@ export class ProjectShowcaseComponent {
         "Implemented communication with Jenkins by consuming its APIs.",
         "Implemented efficient polling using RxJS."
       ],
-      stack: ["Python", "Angular", "Electron", "RxJS", "Jenkins", "Jupyter", "JavaScript", "TypeScript", "Git", "Azure-DevOps", "Keycloak"]
+      stack: ["Python", "Angular", "Electron", "RxJS", "Jenkins", "Material", "Jupyter", "JavaScript", "TypeScript", "Git", "Azure-DevOps", "Keycloak"]
     },
     {
       company: "AI-XPRT",
